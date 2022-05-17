@@ -88,3 +88,49 @@ label > div {
 #changer-2:checked ~ .meme-footer .label-2 div {
     background-color: rebeccapurple;
 }
+
+/* footer */
+.meme-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 2vw;
+}
+.meme-description {
+    height: 10vh;
+    flex-grow: 1;
+    overflow: hidden;
+}
+.description {
+    width: 100%;
+    opacity: 1;
+    flex-grow: 1;
+    height: 5vh;
+    color: white;
+    font-size: 2rem;
+}
+.description-1 {
+    transform: translate(100%, 0vh);
+}
+.description-2 {
+    transform: translate(100%, -5vh);
+}
+.description-3 {
+    transform: translate(100%, -10vh);
+}
+.description-4 {
+    transform: translate(100%, -15vh);
+}
+#changer-1:checked ~ .meme-footer .description-1 {
+    transform: translate(0%, 0vh);
+}
+#changer-2:checked ~ .meme-footer .description-2 {
+    transform: translate(0%, -5vh);
+}
+#changer-3:checked ~ .meme-footer .description-3 {
+    transform: translate(0%, -10vh);
+}
+#changer-4:checked ~ .meme-footer .description-4 {
+    transform: translate(0%, -15vh);
+}
