@@ -1,7 +1,90 @@
 body {
-    background-color: rgba(0, 0, 0, 0.88);
+    background-color: rgba(0, 0, 0, 0.83);
 }
 h1 {
     color: white;
-    font-size: 5rem;
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+main {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    max-width: 1100px;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1vw;
+}
+.container {
+    margin: 0.5%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 3vh 4vw;
+}
+.meme-container {
+    /*width: 81vw;*/
+    max-width: 1100px;
+    height: 50vh;
+    border-radius: 1vw;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.meme {
+    width: 100%;
+    height: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-size: cover;
+    background-position-y: center;
+    opacity: 0;
+}
+.meme img{
+    max-width: 1100px;
+    width: 100%;
+    height: 100%;
+}
+.meme-1 {
+    transform: translate(100%);
+}
+.meme-2 {
+    transform: translate(0%);
+}
+.meme-3 {
+    transform: translate(-100%);
+}
+.meme-4 {
+    transform: translate(-200%);
+}
+#changer-1:checked ~ .meme-container .meme-1 {
+    transform: translate(0%);
+    opacity: 1;
+}
+#changer-2:checked ~ .meme-container .meme-2 {
+    transform: translate(-100%);
+    opacity: 1;
+}
+#changer-3:checked ~ .meme-container .meme-3 {
+    transform: translate(-200%);
+    opacity: 1;
+}
+#changer-4:checked ~ .meme-container .meme-4 {
+    transform: translate(-300%);
+    opacity: 1;
+}
+input {
+    display: none;
+}
+label {
+    display: inline-block;
+}
+label > div {
+    width: 50px;
+    height: 50px;
+    background-color: aliceblue;
+    cursor: pointer;
+}
+#changer-1:checked ~ .meme-footer .label-1 div,
+#changer-2:checked ~ .meme-footer .label-2 div {
+    background-color: rebeccapurple;
 }
