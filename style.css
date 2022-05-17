@@ -10,7 +10,7 @@ h1 {
 }
 main {
     border: 1px solid rgba(255, 255, 255, 0.4);
-    max-width: 1100px;
+    max-width: 70rem; /* 1120px*/ 
     width: 90vw;
     margin-left: auto;
     margin-right: auto;
@@ -23,7 +23,7 @@ main {
 }
 .meme-container {
     /*width: 81vw;*/
-    max-width: 1100px;
+    max-width: 70rem; /* 1120px*/ 
     height: 50vh;
     border-radius: 1vw;
     overflow: hidden;
@@ -157,4 +157,26 @@ label:hover > div {
 #changer-4:checked ~ .meme-footer .description-4 {
     transform: translate(0%, -15vh);
     opacity: 1;
+}
+
+@media screen and (max-width: 640px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .description {
+        font-size: 1rem;
+    }
+    .meme-footer {
+        flex-direction: column-reverse;
+    }
+    .meme-buttons {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .meme-container {
+        height: 25vh;
+    }
+    .meme-description {
+        width: 100%;
+    }
 }
